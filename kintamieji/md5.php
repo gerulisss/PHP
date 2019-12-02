@@ -21,3 +21,5 @@ foreach(range(0, strlen($stringas)-1) as $val) {
     echo $stringas{$val};
     echo "<br></br>";
 }
+
+
