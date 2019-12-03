@@ -1,46 +1,26 @@
 <?php
+// 1. Sugeneruokite masyvą iš 30 elementų (indeksai nuo 0 iki 29), kurių
+//  reikšmės yra atsitiktiniai skaičiai nuo 5 iki 25.
 
-// $masyvas = [''];
+$a = range(5, 25);
 
-// foreach($masyvas as $value) {
-//     _dc($value);
-// }
+shuffle($a);
+$a = array_merge($a, $a, $a);
+$array = array_slice($a, 0, 30);
+_dc($array);
 
-$masyvas = [];
-$masyvas['kojinės'] = [];
-$masyvas['kojinės']['zalios'] = 'visos žalios kojinės';
-$masyvas['kojinės']['juodos'] = 'visos juodos kojinės';
-$masyvas['kojinės']['margos'] = 'visos margos kojinės';
-$masyvas['pirstines'] = [];
-$masyvas['pirstines']['kailines'] = 'mano kailinės pirštinės';
-$masyvas['pirstines']['odines'] = 'mano odinės pirštinės';
-$masyvas['nosines'] = 'visos mano nosinės';
+echo '<br>';
+// $arr = [];
+// for ($i=0; $i < 30; $i++)  $arr[] = null;
+// _dd($arr);
 
-_dc($masyvas);
+// $mas = range(1, 200);
 
-// foreach($masyvas as $key => $value) {
-//     if (is_array($value)) {
-//         foreach($value as $key1 => $value1) {
-//             _dc($value1);
-//             _dc($key1);
-//         }
-//     }
-//     else {
-//         _dc($value);
-//         _dc($key);
-//     }
-// }
+$mas = array_fill(0, 30, '');
 
-
-foreach($masyvas as $key => $value) {
-    if (is_array($value)) {
-        foreach($value as $key1 => $value1) {
-            _dc($value1);
-            _dc($key1);
-        }
-    }
-    else {
-        _dc($value);
-        _dc($key);
-    }
+$m = [];
+foreach($mas as $val) {
+    $m[] = rand(5, 25);
 }
+
+_dc($m);

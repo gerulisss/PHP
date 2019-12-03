@@ -21,3 +21,19 @@ body{
 
 
 background: <?php echo $spalva ?>;
+
+<?php
+
+$pirmas = rand(1, 3);
+
+if($pirmas === 1) {
+    $pirmas = 'labas';
+}
+elseif($pirmas === 2) {
+    $pirmas = 'sveikas';
+}
+else {
+    $pirmas = 'tuščia';
+}
+
+echo $pirmas;

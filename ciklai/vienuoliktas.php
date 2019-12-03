@@ -10,29 +10,23 @@ didžiausio. -->
 echo "<h2>11 Užduotis:</h2>". '<br>';
 echo '<pre></pre>';
 
-$skaiciai = 200;
-for( $a = 1; $a <= $skaiciai; $a++ )
-{
-echo "Skaičius:  $a, ";
-}
-echo '<br></br>';
+for($i = 1; $i < 200; $i++)
 
-for( $a = 1; $a <= $skaiciai; $a++ )
-{
-{
-for( $i = 2; $i < $a; $i++ )
-if( $a % $i == 0 )
-{
-break;
-}
-}
-if( $i == $a )
-echo "Skaičius:  $a, ";
+{ 
+  echo ' '.$i;
 }
 
-echo '<br></br>';
+echo '<pre></pre>';
 
 
-
-
-
+echo "Pirminiai skaičiai: ";
+for($i = 1; $i < 200; $i++)
+{
+    $count = 0;
+    for($j = 1; $j <= $i; $j++)
+    {
+        if($i % $j === 0)
+         $count ++;
+    }
+    if($count <= 2) echo "$i ";
+}

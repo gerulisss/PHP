@@ -31,4 +31,27 @@
 
 
 
-?>
+$a = rand(0, 100);  
+$b = rand(0, 100);
+$c = rand(0, 100);
+
+$vidurkis = ($a / 3) + ($b / 3) + ($c / 3) + (($a % 3 + $b % 3 + $c % 3) / 3); 
+
+echo $a. ", ".$b.", ".$c;
+print("\nVidurkis : ");  
+echo round($vidurkis, 2);
+echo '<br></br>';
+
+if($vidurkis < 10) {
+    echo 'nėra';
+}
+
+elseif($vidurkis > 90) {
+    echo 'pavyko';
+}
+
+echo $a. ", ".$b.", ".$c;
+
+
+print("\nVidurkis : ");  
+echo round($vidurkis, 2);

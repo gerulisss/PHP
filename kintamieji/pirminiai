@@ -112,3 +112,59 @@ header('Content-Type: application/octet-stream');
 header("Content-Transfer-Encoding: utf-8");   
 header("Content-disposition: attachment; filename=\"" . basename($file_url) . "\"");   
 readfile($file_url);  
+
+/**************************/
+
+function randomFloat($min = 0, $max = 1) {  
+    return $min + mt_rand() / mt_getrandmax() * ($max - $min);  
+}  
+var_dump(randomFloat());  
+var_dump(randomFloat(2, 20)); 
+
+/**************************/
+
+// echo "<h2>11 Užduotis:</h2>". '<br>';
+// echo '<pre></pre>';
+
+// $skaiciai = rand(1,200);
+// for( $a = 1; $a <= $skaiciai; $a++ )
+// {
+// echo "Skaičius:  $a, ";
+// }
+// echo '<br></br>';
+
+// for( $a = 1; $a <= $skaiciai; $a++ )
+// {
+// {
+// for( $i = 2; $i < $a; $i++ )
+// if( $a % $i == 0 )
+// {
+// break;
+// }
+// }
+// if( $i == $a )
+// echo "Skaičius:  $a, ";
+// }
+
+// echo '<br></br>';
+
+
+/**************************/
+
+function pirminiai($number){ 
+    if ($number == 1) 
+    return 0; 
+    for ($i = 2; $i <= $number/2; $i++){ 
+        if ($number % $i == 0) 
+            return 0; 
+    } 
+    return 1; 
+} 
+ 
+$number = rand(1, 200); 
+$flag = pirminiai($number); 
+if ($flag == 1) 
+    echo  "Dalinasi: $number"; 
+
+else  
+echo "Nesidalina: $number";
