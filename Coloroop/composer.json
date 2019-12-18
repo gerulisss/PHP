@@ -1,0 +1,10 @@
+{
+    "name": "Color Mixer",
+    "description": "Nice colors makers",
+    "autoload": {
+        "psr-4": {
+        "ColorMixer\\": "klases"
+        }
+
+    }
+}
