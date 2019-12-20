@@ -1,4 +1,4 @@
-# PHP-Paskaita
+# PHP-Užduotys
 
 **Author**
 -------------------------
