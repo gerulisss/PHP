@@ -1,4 +1,4 @@
-# PHP-Užduotys
+# PHP Užduotys
 
 **Author**
 -------------------------
